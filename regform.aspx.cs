@@ -23,7 +23,7 @@ namespace reg
             try
             {
                 SqlConnection conn = new SqlConnection(con);
-                SqlCommand cmd = conn.CreateCommand();
+                SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "sp_insert";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id",TextBox2.Text.Trim());
